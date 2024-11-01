@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingOrm台北公車應援路線</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        h3 {
+            margin: 20px 0;
+            color: #343a40;
+        }
+
+        #route-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 20px;
+            padding: 0 20px;
+            background-color: #ffffff;
+            border-radius: px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px; /* 設定最大寬度 */
+            /* max-height: 400px; 設定最大寬度 */
+        }
+        label {
+            margin: 5px 10px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #495057;
+        }
+
+        #map {
+            width: 100%;
+            max-width: 800px; /* 限制地圖最大寬度 */
+            height: 500px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0 20px;
+        }
+
+        @media (max-width: 600px) {
+            #route-options {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px; /* 選項之間的間距縮小 */
+            }
+
+            #route-options label {
+                flex-basis: calc(50% - 8px); /* 每行兩個選項 */
+                margin: 0; /* 移除外邊距 */
+                padding: 6px 10px; /* 增加內邊距,讓選項更緊湊 */
+                justify-content: center;
+                font-size: 13px; /* 字體稍微再小一點 */
+            }
+
+            #route-options label input {
+                margin-right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>LingOrm台北公車應援路線</h2>
+    <div id="route-options"></div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
