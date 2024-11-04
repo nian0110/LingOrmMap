@@ -102,24 +102,26 @@ function addMarkers(stops) {
     stops.forEach(stop => {
         const marker = L.marker([stop.lat, stop.lon])
             .addTo(map)
-            .bindPopup(`電視牆：${stop.stopName}`);
+            .bindPopup(`${stop.LingOrm}${stop.type}<br>地點：${stop.stopName}`);
     });
 }
 
 // 定義站點資料
 const stopsData = [
-    { lat: 25.036456657891122, lon: 121.56780476783925, stopName: '信義威秀' },
-    { lat: 25.0389480897111, lon: 121.56660203337223, stopName: '新光三越A8' },
-    { lat: 25.03401778879481, lon: 121.56058665354968, stopName: '基隆路/信義路口' },
-    { lat: 25.052974564023664, lon: 121.60675038741421, stopName: '捷運南港站' },
-    { lat: 25.043549342816753, lon: 121.54556322163496, stopName: '忠孝SOGO' },
-    { lat: 25.044210574121113, lon: 121.50732030736353, stopName: '西門徒步區' },
-    { lat: 25.04296026124686, lon: 121.50729424203418, stopName: '真善美' },
-    { lat: 25.045566662127758, lon: 121.5170958173358, stopName: '北車M8出口' },
-    { lat: 25.045696655149857, lon: 121.51626253413437, stopName: '南陽街/許昌街（新光三越前）' },
-    { lat: 25.049371283999594, lon: 121.51856583115223, stopName: '京站威秀' }
+    { lat: 25.036456657891122, lon: 121.56780476783925, stopName: '信義威秀2F', LingOrm: 'Orm', type:'電視牆'},
+    { lat: 25.0389480897111, lon: 121.56660203337223, stopName: '新光三越A8', LingOrm: 'LingOrm', type:'電視牆'},
+    { lat: 25.03304315273338, lon: 121.55985755132421, stopName: '基隆路/信義路口', LingOrm: 'Ling', type:'電視牆'},
+    { lat: 25.052974564023664, lon: 121.60675038741421, stopName: '捷運南港站B1大廳', LingOrm: 'LingOrm', type:'電視牆'},
+    { lat: 25.04216738766774, lon: 121.54531438657679, stopName: '忠孝SOGO', LingOrm: 'Ling', type:'電視牆'},
+    { lat: 25.044210574121113, lon: 121.50732030736353, stopName: '西門徒步區(漢中武昌交叉口)', LingOrm: 'Ling', type:'電視牆'},
+    { lat: 25.04296026124686, lon: 121.50729424203418, stopName: '西門町真善美', LingOrm: 'LingOrm, Orm', type:'電視牆'},
+    { lat: 25.045566662127758, lon: 121.5170958173358, stopName: '北車M8出口', LingOrm: 'Ling', type:'電視牆'},
+    { lat: 25.045696655149857, lon: 121.51626253413437, stopName: '南陽街/許昌街(新光三越前)', LingOrm: 'Ling', type:'電視牆'},
+    { lat: 25.049371283999594, lon: 121.51856583115223, stopName: '京站威秀6F', LingOrm: 'LingOrm, Orm', type:'電視牆'},
+    { lat: 25.021576329467788, lon: 121.53196265879741, stopName: '自彈自唱Dolce far Niente', LingOrm: 'LingOrm', type:'咖啡廳'},
+    { lat: 25.05089653864081, lon: 121.59340710326795, stopName: '大山昆陽咖啡', LingOrm: 'Orm', type:'易拉展'},
+    { lat: 25.052207448934162, lon: 121.59815831658337, stopName: 'W9T酒等了', LingOrm: 'LingOrm', type:'場外應援布置'},
 ];
-
 // 添加標記到地圖
 addMarkers(stopsData);
 
